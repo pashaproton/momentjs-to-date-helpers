@@ -2,12 +2,17 @@
 Commonly used patterns to get rid of moment.js
 
 ## Get diff of months
+### moment.js example
 ```
-const monthDiff = (d1, d2) => {
-  let months = (d2.getFullYear() - d1.getFullYear()) * 12
+moment(b).diff(a, 'months')
+```
+### JavaScript example
+```
+const monthDiff = (a, b) => {
+  let months = (b.getFullYear() - a.getFullYear()) * 12
   
-  months -= d1.getMonth()
-  months += d2.getMonth()
+  months -= a.getMonth()
+  months += b.getMonth()
 
   return months <= 0 ? 0 : months
 }
