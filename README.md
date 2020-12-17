@@ -17,3 +17,13 @@ const monthDiff = (a, b) => {
   return months <= 0 ? 0 : months
 }
 ```
+
+## Get diff of days
+### moment.js example
+```
+moment(a).diff(b, 'days')
+```
+### JavaScript example
+```
+const daysDiff = (a, b) => Math.floor((a.getTime() - b.getTime()) / 1000 / 60 / 60 / 24)
+```
